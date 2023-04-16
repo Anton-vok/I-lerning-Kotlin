@@ -1,0 +1,15 @@
+import kotlin.math.sqrt
+fun serq_d(a:Double,b:Double,c:Double): Pair<Double?, Double?>{
+
+    var d=(b*b)-(4*a*c)
+
+    if (d==0.0){
+        d=sqrt(d)
+        return Pair( ((-1*b)+d)/(2*a) ,null)
+    } else if (d>0.0){
+        d=sqrt(d)
+        return Pair( ((-1*b)+d)/(2*a) , ((-1*b)-d)/(2*a)  )
+    } else{
+        return Pair(null, null)
+    }
+}
